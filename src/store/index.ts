@@ -1,5 +1,5 @@
 import { configureStore, createSlice } from "@reduxjs/toolkit";
-import { InitialState } from "../../Types";
+import { InitialState } from "../Types";
 import { getHomePageVideos } from "./reducers/getHomePageVideos";
 
 const initialState: InitialState = {
