@@ -88,6 +88,7 @@ export const parseData = async (items: any[]) => {
           });
       }
     );
+    console.log(parsedData);
 
     return parsedData;
   } catch (err) {
