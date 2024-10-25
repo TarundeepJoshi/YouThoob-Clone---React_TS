@@ -38,11 +38,11 @@ export default function Search() {
               next={() => dispatch(getSearchPageVideos(true))}
               hasMore={videos.length < 500}
               loader={<Spinner />}
-              height={600}
+              height={685}
             >
-              {videos.map((item: HomePageVideos) => {
+              {videos.map((item: HomePageVideos, index) => {
                 return (
-                  <div className="my-5" key={item.videoId}>
+                  <div className="my-5" key={`${item.videoId}-${index}`}>
                     <SearchCard data={item} />
                   </div>
                 );

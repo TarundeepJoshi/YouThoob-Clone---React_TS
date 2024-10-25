@@ -30,7 +30,7 @@ export default function Navbar() {
         <Link to="/">
           <div className="flex gap-1 items-center justify-center">
             <BsYoutube className="text-3xl text-red-600" />
-            <span className="text-xl font-medium">YouTube</span>
+            <span className="text-xl font-medium">YouThoob</span>
           </div>
         </Link>
       </div>
@@ -79,7 +79,7 @@ export default function Navbar() {
           </span>
         </div>
         <img
-          src="https://yt3.ggpht.com/wgnEbc2Ec2JYkeyzUbiHzDlAFObI2Btwo2YRCEF1aCMBiRc5E_zWy8-URBQS3EMQ1yzzaGFR=s88-c-k-c0x00ffffff-no-rj-mo"
+          src="https://yt3.googleusercontent.com/Lru9fraKjQvSWtAkZHz03ccTbzKNM5wk_BIuUDcpOOjz6bJSjnFvUbBnmmH0hTvqZcRqfn6X=s88-c-k-c0x00ffffff-no-rj"
           className="w-9 h-9 rounded-full"
           alt="logo"
         />
