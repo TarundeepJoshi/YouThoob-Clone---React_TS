@@ -2,7 +2,6 @@ import { useEffect } from "react";
 import InfiniteScroll from "react-infinite-scroll-component";
 import SearchCard from "../components/SearchCard";
 import Navbar from "../components/Navbar";
-import Sidebar from "../components/Sidebar";
 import Spinner from "../components/Spinner";
 import { clearVideos } from "../store";
 import { useAppDispatch, useAppSelector } from "../store/hooks";
@@ -30,7 +29,6 @@ export default function Search() {
         <Navbar />
       </div>
       <div className="flex" style={{ height: "92.5vh" }}>
-        <Sidebar />
         {videos.length ? (
           <div className="py-8 pl-8 flex flex-col gap-5 w-full">
             <InfiniteScroll

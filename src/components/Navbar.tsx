@@ -13,6 +13,7 @@ export default function Navbar() {
   const navigate = useNavigate();
   const dispatch = useAppDispatch();
   const searchTerm = useAppSelector((state) => state.youtubeApp.searchTerm);
+
   const handleSearch = () => {
     if (location.pathname !== "/search") navigate("/search");
     else {
@@ -22,15 +23,17 @@ export default function Navbar() {
   };
 
   return (
-    <div className="flex justify-between items-center  px-14 h-14 bg-[#212121] opacity-95 sticky top-0 z-50">
-      <div className="flex gap-8 items-center text-2xl">
+    <div className="flex justify-between items-center px-14 h-14 bg-[#212121] opacity-95 sticky top-0 z-50 max-[900px]:px-2">
+      <div className="flex gap-6 items-center text-2xl">
         <div>
           <GiHamburgerMenu />
         </div>
         <Link to="/">
           <div className="flex gap-1 items-center justify-center">
             <BsYoutube className="text-3xl text-red-600" />
-            <span className="text-xl font-medium">YouThoob</span>
+            <span className="text-xl font-medium max-[900px]:hidden">
+              YouThoob
+            </span>
           </div>
         </Link>
       </div>
@@ -48,7 +51,7 @@ export default function Navbar() {
               </div>
               <input
                 type="text"
-                className="w-96 bg-zinc-900 focus:outline-none border-none"
+                className="lg:w-80 max-[620px]:w-14 bg-zinc-900 focus:outline-none border-none"
                 value={searchTerm}
                 onChange={(e) => dispatch(changeSearchTerm(e.target.value))}
               />
@@ -65,22 +68,22 @@ export default function Navbar() {
             </button>
           </div>
         </form>
-        <div className="text-xl p-3 bg-zinc-900 rounded-full">
-          <TiMicrophone />
+        <div className="text-xl p-3 bg-zinc-900 rounded-full max-[620px]:hidden">
+          <TiMicrophone className="max-[620px]:hidden" />
         </div>
       </div>
       <div className="flex gap-5 items-center text-xl">
-        <BsCameraVideo />
-        <IoAppsSharp />
-        <div className="relative">
-          <BsBell />
+        <BsCameraVideo className="max-[620px]:hidden" />
+        <IoAppsSharp className="max-[900px]:hidden max-[620px]:hidden" />
+        <div className="relative max-[900px]:hidden max-[620px]:hidden">
+          <BsBell className="max-[900px]:hidden max-[620px]:hidden" />
           <span className="absolute bottom-2 left-2 text-xs bg-red-600 rounded-full px-1">
             9+
           </span>
         </div>
         <img
           src="https://yt3.googleusercontent.com/Lru9fraKjQvSWtAkZHz03ccTbzKNM5wk_BIuUDcpOOjz6bJSjnFvUbBnmmH0hTvqZcRqfn6X=s88-c-k-c0x00ffffff-no-rj"
-          className="w-9 h-9 rounded-full"
+          className="w-9 h-9 rounded-full max-[620px]:hidden"
           alt="logo"
         />
       </div>
